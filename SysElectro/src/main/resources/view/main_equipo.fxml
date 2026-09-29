@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="miContenedor" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syselectro.controller.EquipoController">
+   <children>
+      <VBox spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Gestionar Equipos electrónicos" textFill="#1f3397">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label text="Filtrar" />
+                  <TextField fx:id="txtFiltroDato" prefWidth="220.0" promptText="Escriba para filtrar..." />
+                  <Button mnemonicParsing="false" onAction="#buscar" styleClass="btn, btn-primary" text="Buscar" />
+               </children>
+            </HBox>
+            <HBox spacing="15.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane hgap="10.0" vgap="8.0">
+                     <columnConstraints>
+                        <ColumnConstraints minWidth="120.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="260.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Formulario de Registro" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label text="Nombre del equipo" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtNombre" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Modelo" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtModelo" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Estado" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="cbxEstado" maxWidth="1.7976931348623157E308" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Precio (S/)" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtPrecio" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Stock" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtStock" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Garantía (meses)" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtGarantiaMeses" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Categoría" GridPane.rowIndex="7" />
+                        <ComboBox fx:id="cbxCategoria" maxWidth="1.7976931348623157E308" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label text="Marca" GridPane.rowIndex="8" />
+                        <ComboBox fx:id="cbxMarca" maxWidth="1.7976931348623157E308" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#validarFormulario" styleClass="btn, btn-success" text="Guardar" />
+                              <Button mnemonicParsing="false" onAction="#clearForm" styleClass="btn, btn-warning" text="Cancelar" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="lbnMsg" maxWidth="1.7976931348623157E308" text="" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableView" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

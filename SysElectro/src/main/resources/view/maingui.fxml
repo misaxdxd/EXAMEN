@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bp" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.syselectro.controller.MainGuiController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Mantenimiento">
+               <items>
+                  <MenuItem fx:id="menuCategoria" id="menuCategoria" mnemonicParsing="false" text="Categorías" />
+                  <MenuItem fx:id="menuMarca" id="menuMarca" mnemonicParsing="false" text="Marcas" />
+                  <MenuItem fx:id="menuEquipo" id="menuEquipo" mnemonicParsing="false" text="Equipos electrónicos" />
+                  <MenuItem fx:id="menuCliente" id="menuCliente" mnemonicParsing="false" text="Clientes" />
+                  <MenuItem fx:id="menuProveedor" id="menuProveedor" mnemonicParsing="false" text="Proveedores" />
+                  <MenuItem fx:id="menuUsuario" id="menuUsuario" mnemonicParsing="false" text="Usuarios (vendedores)" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="menuSalir" id="menuSalir" mnemonicParsing="false" text="Salir" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="tabPane" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab closable="false" text="Principal">
+               <content>
+                  <StackPane>
+                     <children>
+                        <Label text="SysElectro - Sistema de ventas de equipos electrónicos" />
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
