@@ -1,0 +1,2 @@
+-- Los usuarios davidmp y pepito ahora se cargan automáticamente desde schema_sv.sql.
+-- Este archivo ya no es necesario; se conserva solo como referencia.
